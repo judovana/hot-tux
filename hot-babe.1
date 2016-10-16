@@ -1,0 +1,99 @@
+.\"                                      Hey, EMACS: -*- nroff -*-
+.\" First parameter, NAME, should be all caps
+.\" Second parameter, SECTION, should be 1-8, maybe w/ subsection
+.\" other parameters are allowed: see man(7), man(1)
+.TH HOT\-BABE 1 "December 4, 2004"
+.\" Please adjust this date whenever revising the manpage.
+.\"
+.\" Some roff macros, for reference:
+.\" .nh        disable hyphenation
+.\" .hy        enable hyphenation
+.\" .ad l      left justify
+.\" .ad b      justify to both left and right margins
+.\" .nf        disable filling
+.\" .fi        enable filling
+.\" .br        insert line break
+.\" .sp <n>    insert n+1 empty lines
+.\" for manpage-specific macros, see man(7)
+.SH NAME
+hot\-babe \- is a small graphical utility which displays the system activity in a very special way
+.SH SYNOPSIS
+.B hot\-babe
+.RI [ options ]
+.SH DESCRIPTION
+This manual page documents briefly the
+.B hot\-babe
+command.
+.\" TeX users may be more comfortable with the \fB<whatever>\fP and
+.\" \fI<whatever>\fP escape sequences to invode bold face and italics,
+.\" respectively.
+\fBhot\-babe\fP is a small graphical utility which displays the system activity in a very special way. When the CPU is idle, it displays a dressed girl, and when the activity goes up, as the temperature increases, the girl begins to undress, to finish totally naked when the system activity reaches 100%. Of course, if you can be shocked by nudity, don't use it!
+.SH OPTIONS
+As for now, \fBhot\-babe\fP supports a few command\-line options:
+.TP
+.B \-h, \-\-help
+display a small help message and exit.
+.TP
+.B \-t, \-\-threshold n
+ensure that only the first picture (totally dressed girl) as long as the system activity is below n%.
+.TP
+.B \-d, \-\-delay
+n update the display every n milliseconds.
+.TP
+.B \-i, \-\-incremental
+ponder every sample with time, the result is a somewhat smoother animation, and the cpu has to be 100% for a long time before the girl will be totally naked, and the cpu has to be at 0% for a long time for the girl to dress totally.
+.TP
+.B \-N, \-\-noNice
+Don't consider reniced processes. This is usefull if you use seti@home or distributed.net, which always eat almost all the CPU.
+.TP
+.B \-n, \-\-nice
+n Put the hot\-babe process in nice n.
+.TP
+.B \-\-dir
+Directory give the directory where hot\-babe must load the pictures.
+.TP
+.B \-\-geometry
+Use the specified geometry (only position is supported {+|-}x{+|x}y).
+.TP
+.B \-v, \-\-version
+Show version and exit.
+.TP
+.SH FILES
+.TP
+.B share/hot\-babe/ ./hot\-babe/
+Default directory of hot\-babes pictures. It can be either absolute path, relative, relative to share/hot\-babe/ directory or relative to ~/.hot\-babe/ directory. It contains the themes that can be used.
+.P
+.B Note:
+Each pictures subdirectory must contain a file named "descr" which gives some info to the hot\-babe process. The first line gives the number of pictures to use, and then the name of the pictures, one per line.
+.P
+Here is an example:
+.RS
+.nf
+5
+hb01_4.png
+hb01_3.png
+hb01_2.png
+hb01_1.png
+hb01_0.png
+.fi
+.RE
+.TP
+.B ~/.hot\-babe/config
+User configuration file. Put any possible long option. Empty lines and whatever after a # are ignored.
+.P
+Here is an example:
+.RS
+.nf
+#threshold 30
+incremental
+#noNice
+#nice 5
+#delay 100
+#dir hb01
+#geometry +0-0
+.fi
+.RE
+.br
+.SH AUTHOR
+This page has been updated by Cyprien <cyprien33@laposte.net>
+

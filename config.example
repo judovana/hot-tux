@@ -1,0 +1,7 @@
+#threshold 3
+incremental
+#noNice
+#nice 5
+#delay 100
+#dir hb01
+#geometry -0-0

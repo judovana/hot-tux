@@ -1,0 +1,45 @@
+0.2.2:
+- Added option --version, -v
+- Added hot-babe pixmap
+- Bugfix when the number of pictures was not 5, resulting on awful colors
+- Inform the wm that hot-babe is a dock (I really didn't check it)
+- Added option --geometry to position the hot-babe
+
+0.2.1:
+- Fixed some include missing for FreeBSD
+- Added support of a user configuration and pictures directory
+- Added configuration example file
+- Fixed segfault when the number of pictures was smaller than 5
+- Update man page
+- Fixed Makefile to follow right DESTDIR/PREFIX usage ;-)
+
+0.2.0:
+- Using gdk2 and gdk-pixbuf2
+- License is now "Artistic License" for code and pictures
+
+0.1.6:
+- FreeBSD port
+
+0.1.5:
+- updated man page (added new options)
+- updated Makefile (removed one INSTALL line)
+
+0.1.4:
+- New option: -n, --nice
+- New option: --dir
+- Load images from a directory
+- Pictures are in a separate directory instead than inlined
+
+0.1.3:
+- bugfixes and optimisation release. Nothing new here.
+
+0.1.2:
+-New option: -N, --noNice
+ With this option, the reniced processes aren't counted. This is usefull
+ if you use seti@home or distributed.net, which always eat almost all
+ the CPU. (patch from Pascal Terjan <pascal.terjan@free.fr>)
+-a man page!
+
+0.1.1:
+ added a missing #include <string.h>
+ (reported by Gilles Cuesta <gcuesta@netimedias.com>)
