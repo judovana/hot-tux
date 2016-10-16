@@ -1,4 +1,6 @@
-/* Hot-babe 
+/* Hot-tux 
+ * Copyright (C) 2016 jiri vanek <judovana@email.cz>
+ * Hot-babe
  * Copyright (C) 2002 DindinX <David@dindinx.org>
  * Copyright (C) 2002 Bruno Bellamy.
  *
@@ -166,13 +168,13 @@ static void create_hotbabe_window(void)
   if( bm.y < 0 ) bm.y += 1 + gdk_screen_get_height(defscrn) - attr.height;
   attr.x = bm.x;
   attr.y = bm.y;
-  attr.title = "hot-babe";
+  attr.title = "hot-tux";
   attr.event_mask = MASK;
   attr.wclass = GDK_INPUT_OUTPUT;
   attr.visual = gdk_visual_get_system();
   attr.colormap = gdk_colormap_get_system();
-  attr.wmclass_name = "hot-babe";
-  attr.wmclass_class = "hot-babe";
+  attr.wmclass_name = "hot-tux";
+  attr.wmclass_class = "hot-tux";
   attr.window_type = GDK_WINDOW_TOPLEVEL;
 
   bm.win = gdk_window_new(NULL, &attr,
@@ -285,12 +287,12 @@ static void hotbabe_setup_samples(void)
 
 static void print_version(void)
 {
-  g_print("hot-babe version " VERSION "\n\n");
+  g_print("hot-tux version " VERSION "\n\n");
 }
 
 static void print_usage(void)
 {
-  g_print("Usage: hot-babe [OPTIONS]\n\n");
+  g_print("Usage: hot-tux [OPTIONS]\n\n");
   g_print("OPTIONS are from the following:\n\n");
   g_print(" -t, --threshold n    use only the first picture before n%%.\n");
   g_print(" -i, --incremental    incremental (slow) mode.\n");
@@ -299,7 +301,7 @@ static void print_usage(void)
   g_print(" -N, --noNice         don't count nice time in usage.\n");
   g_print(" -n, --nice  n        set self-nice to n.\n");
   g_print("     --dir directory  use images from directory.\n");
-  g_print("     --geometry {+|-}x{+|-}y  position the hot-babe.\n");
+  g_print("     --geometry {+|-}x{+|-}y  position the hot-tux.\n");
   g_print(" -v, --version        show version and exit.\n");
 }
 
@@ -350,7 +352,7 @@ int main(int argc, char **argv)
   dir            = NULL;
 
 
-  snprintf( conf, 256, "%s/.hot-babe/config", g_get_home_dir() );
+  snprintf( conf, 256, "%s/.hot-tux/config", g_get_home_dir() );
   f = fopen( conf, "r" );
   if( f )
   {
@@ -452,8 +454,8 @@ int main(int argc, char **argv)
 
   if( dir != NULL ) {
     char path[256], home[256];
-    snprintf( path, 256, PREFIX "/share/hot-babe/%s", dir );
-    snprintf( home, 256, "%s/.hot-babe/%s", g_get_home_dir(), dir );
+    snprintf( path, 256, PREFIX "/share/hot-tux/%s", dir );
+    snprintf( home, 256, "%s/.hot-tux/%s", g_get_home_dir(), dir );
     if( load_anim( &bm.anim, path ) &&
         load_anim( &bm.anim, home ) &&
         load_anim( &bm.anim, dir ) ) {
@@ -461,7 +463,7 @@ int main(int argc, char **argv)
       return 1;
     }
   } else {
-    if( load_anim( &bm.anim, PREFIX "/share/hot-babe/hb01" ) &&
+    if( load_anim( &bm.anim, PREFIX "/share/hot-tux/hb01" ) &&
         load_anim( &bm.anim, "hb01" ) ) {
       fprintf( stderr, "Can't find pictures\n" );
       return 1;

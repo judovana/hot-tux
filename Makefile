@@ -1,6 +1,6 @@
 # where to install this program
 PREFIX := /usr/local
-VERSION := 0.2.2
+VERSION := 0.3.0
 
 # optimization cflags
 CFLAGS += -O2 -Wall -g `pkg-config gdk-2.0 gdk-pixbuf-2.0  --cflags` -DPREFIX=\"$(PREFIX)\" -DVERSION=\"$(VERSION)\"

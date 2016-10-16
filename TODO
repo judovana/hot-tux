@@ -1,8 +1,0 @@
-Add icon
---version
-
-2/ faire la différence entre deux images successives.. effectivement bcp de pixels seront les meme..
-deux avantages ::
-a) tous les pixels noirs de la différence ne seront pas à afficher au mem titre que les transparents ... enfin.. ne seront pas à mettre à jour ...
-b) tu n'auras plus de moyenne à faire.. juste rajouter un pourcentage de la différence...
-
