@@ -2,7 +2,7 @@
 
 This is rework of well known hot-babe system workload monitor. Unlike [hot babe](https://www.youtube.com/watch?v=kKYQnLSKz6g&has_verified=1), which can be banned for many distributions due tu nudity, this implementation is making  the tux just little bit... different. As the transparency works in same mode as for [hot babe](https://sourceforge.net/projects/hotbabe/) See on your own:
 
-nothing is happening, machine and tux is bored:
+nothing is happening, machine and tux are bored:
 ![ice](./hb01/hb01_4.png)
 
 not much is happening, tux still needs an coat:
